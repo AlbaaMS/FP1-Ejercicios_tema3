@@ -1,4 +1,4 @@
-'''
+
 from cadenas import estiliza_mensaje 
 def test_estiliza_mensaje():
     print("Probando estiliza_mensaje...")
@@ -21,3 +21,4 @@ def cadena_test():
 
 cadena_test()
 print("Todas las pruebas pasaron correctamente")
+'''
