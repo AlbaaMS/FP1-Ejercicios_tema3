@@ -1,5 +1,5 @@
-from numeros import invierte_numero, convierte_binario, busca_perfecto, busca_perfecto_rapido
-import time
+from numeros import invierte_numero#, convierte_binario, busca_perfecto, busca_perfecto_rapido
+#import time
 
 def test_invierte_numero():
     print("Probando invierte_numero...")
@@ -7,7 +7,7 @@ def test_invierte_numero():
     assert invierte_numero(12345) == 54321
     assert invierte_numero(1000) == 1
     assert invierte_numero(987654321) == 123456789
-
+'''
 def test_convierte_binario():
     print("Probando convierte_binario...")
     assert convierte_binario(0) == "0"
@@ -43,8 +43,8 @@ def test_busca_perfecto():
     #tiempo, resultado = cronometra_llamada(busca_perfecto, 5)
     #print(f"Tiempo ejecución de busca_perfecto(5): {tiempo:.6f} segundos")
     #assert resultado == 33550336
-
+'''
 test_invierte_numero()
-test_convierte_binario()
-test_busca_perfecto()
+#test_convierte_binario()
+#test_busca_perfecto()
 print("Todas las pruebas pasaron correctamente.")

@@ -21,14 +21,14 @@ def es_palindromo(texto: str, ignora_espacios: bool= False, ignora_mayusculas: b
     - ignora_mayusculas (bool): Si es True, convierte todo a minúsculas.
     """
     if ignora_espacios:
-        texto = texto.replace("","")
+        texto = texto.replace(" ","")
 
     if ignora_mayusculas:
         texto = texto.lower()
 
     return texto == invierte_cadena(texto)
 
-def estiliza_mensaje(texto:str, alterna_may_min: bool = True, sustituye_espacios: str = " ") -> str:
+def estiliza_mensaje(texto:str, alterna_may_min: bool = True, sustituye_espacios: str = " ", usa_dieresis:bool = False) -> str:
     res = ""
     toca_mayusculas = True
     for c in texto:
@@ -37,10 +37,14 @@ def estiliza_mensaje(texto:str, alterna_may_min: bool = True, sustituye_espacios
                 c = c.upper()
             else:
                 c= c.lower()
-                toca_mayusculas = not toca_mayusculas
-        res += c
-        
-   # TODO implementar sustituye espacios
+            toca_mayusculas = not toca_mayusculas
 
+        if sustituye_espacios != " " and c == " ":
+            c = sustituye_espacios
+            
+        res += c
+
+
+    return res
 
     
