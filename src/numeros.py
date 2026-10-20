@@ -53,17 +53,19 @@ def clasifica_rango(limite:int) -> None:
     for i in range(1, limite + 1):
         print(f"{i}: {clasifica_numero(i)}")
 
-def busca_perfecto (posicion:int) -> int:
+def busca_perfecto(posicion: int) -> int:
     '''
-    Busca y devuelve el num perfecto cuya pos se indique
+    Busca y devuelve el número perfecto cuya posición se indique.
+    Por ejemplo, si posicion es 1, se devuelve el primer número perfecto (6).
     '''
     n = 1
     contador = 0
     while True:
-        if clasifica_numero(n) == "Perfecto":
+        if clasifica_numero(n) == "PERFECTO":
             contador += 1
             if contador == posicion:
                 return n
         n += 1
-    
+
+
 
